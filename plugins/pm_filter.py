@@ -63,10 +63,15 @@ async def pm_AutoFilter(client, msg, pmspoll=False):
         temp.PM_BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton(text="HOW TO DOWNLOAD",url='https://telegram.me/c/1832276425/510')]
+            
             [InlineKeyboardButton(text=f"📄 𝗣𝗮𝗴𝗲 1/{math.ceil(int(total_results) / 6)}", callback_data="pages"),
             InlineKeyboardButton(text="𝗡𝗲𝘅𝘁 ➡️", callback_data=f"pmnext_{req}_{key}_{offset}")]
         )
+        btn.insert(0,
+
+[
+
+     [ InlineKeyboardButton(text="HOW TO DOWNLOAD",url="https://telegram.me/c/1832276425/510")]
     else:
         btn.append(
             [InlineKeyboardButton(text="📄 𝗣𝗮𝗴𝗲 1/1", callback_data="pages")]
